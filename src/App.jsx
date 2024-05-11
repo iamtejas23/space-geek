@@ -1,6 +1,8 @@
 // App.js
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import asteroids from './assets/asteroids.png';
+import { IoPlanetSharp } from "react-icons/io5";
 
 function App() {
   return (
@@ -72,15 +74,15 @@ function MainContent() {
         {apodData && (
           <div className="apod">
             <img src={apodData.url} alt={apodData.title} />
-            <p>{apodData.explanation}</p>
+            <p className='des'>{apodData.explanation}</p>
           </div>
         )}
       </section>
       <section className="neo-section">
-        <h2>Near Earth Objects</h2>
+        <h2> <img src={asteroids} alt="ast" /> Near Earth Objects </h2>
         {neoData && (
           <div className="neo">
-            <p>Total NEOs: {neoData.element_count}</p>
+            <p><IoPlanetSharp color='red' />Total NEOs:{neoData.element_count} </p>
             {/* Display more NEO data here */}
           </div>
         )}
