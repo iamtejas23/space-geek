@@ -1,0 +1,55 @@
+.solar-system-container {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .planet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .planet-card {
+    background-color: #ffffff1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .planet-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .planet-details {
+    font-size: 14px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  

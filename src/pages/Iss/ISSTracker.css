@@ -1,0 +1,21 @@
+.iss-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  
+}
+
+.iss-tracker {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .iss-image {
+    width: 100%;
+    height: auto;
+  }
+  

@@ -1,38 +1,20 @@
-// App.js
+// Home.js
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import asteroids from './assets/asteroids.png';
+import '../../App.css'; // Import your CSS file for styling
+import asteroids from '../../assets/asteroids.png';
 import { IoPlanetSharp } from "react-icons/io5";
 
-function App() {
-  return (
-    <div className="app">
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="header">
-      <h1>Space Explorer</h1>
-    </header>
-  );
-}
-
-function MainContent() {
+function Home() {
   const [apodData, setApodData] = useState(null);
   const [neoData, setNeoData] = useState(null);
   const [roverPhotos, setRoverPhotos] = useState([]);
-  const [spacexData, setSpacexData] = useState(null);
+  
 
   useEffect(() => {
     fetchApod();
     fetchNeo();
     fetchRoverPhotos();
-    fetchSpacex();
+    
   }, []);
 
   const fetchApod = async () => {
@@ -61,11 +43,7 @@ function MainContent() {
     setRoverPhotos(prevPhotos => [...prevPhotos, ...data.photos]);
   };
 
-  const fetchSpacex = async () => {
-    const response = await fetch('https://api.spacexdata.com/v4/launches');
-    const data = await response.json();
-    setSpacexData(data);
-  };
+ 
 
   return (
     <main className="main-content">
@@ -96,28 +74,9 @@ function MainContent() {
           <button onClick={loadMoreRoverPhotos}>Load More Photos</button>
         </div>
       </section>
-      <section className="spacex-section">
-        <h2>SpaceX Launches</h2>
-        {spacexData && (
-          <ul className="spacex-list">
-            {spacexData.map((launch, index) => (
-              <li key={index}>
-                <strong>{launch.name}</strong> - {launch.date_utc}
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      
     </main>
   );
 }
 
-function Footer() {
-  return (
-    <footer className="footer">
-      <p>© 2024 Space Explorer</p>
-    </footer>
-  );
-}
-
-export default App;
+export default Home;
