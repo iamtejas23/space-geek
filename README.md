@@ -18,12 +18,12 @@ Welcome to **Space Explorer**! A futuristic web application to explore the wonde
 - **NASA APIs** - To fetch real-time space data.
 - **CSS** - For styling the components with a futuristic theme.
 
-## 👨‍💻 Author
-- **Tejas Mane**
-
 ## 📝 License
 - This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## ⭐ Acknowledgments
 - NASA APIs for providing the data.
 - All the amazing contributors to open-source libraries and tools used in this project.
+
+## 👨‍💻 Author
+- **Tejas Mane**
