@@ -1,20 +1,18 @@
-// Home.js
 import React, { useState, useEffect } from 'react';
 import '../../App.css'; // Import your CSS file for styling
 import asteroids from '../../assets/asteroids.png';
 import { IoPlanetSharp } from "react-icons/io5";
+import Footer from '../../components/Footer/Footer';
 
 function Home() {
   const [apodData, setApodData] = useState(null);
   const [neoData, setNeoData] = useState(null);
   const [roverPhotos, setRoverPhotos] = useState([]);
-  
 
   useEffect(() => {
     fetchApod();
     fetchNeo();
     fetchRoverPhotos();
-    
   }, []);
 
   const fetchApod = async () => {
@@ -36,14 +34,10 @@ function Home() {
   };
 
   const loadMoreRoverPhotos = async () => {
-    // Fetch more rover photos (page 2)
     const response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=HNTBQ0TKuM40tQx0w8bxbNQSKUsyJu7RO02Oi01Y`);
     const data = await response.json();
-    // Append new photos to existing array
     setRoverPhotos(prevPhotos => [...prevPhotos, ...data.photos]);
   };
-
- 
 
   return (
     <main className="main-content">
@@ -60,8 +54,7 @@ function Home() {
         <h2> <img src={asteroids} alt="ast" /> Near Earth Objects </h2>
         {neoData && (
           <div className="neo">
-            <p><IoPlanetSharp color='red' />Total NEOs:{neoData.element_count} </p>
-            {/* Display more NEO data here */}
+            <p><IoPlanetSharp color='red' /> Total NEOs: {neoData.element_count} </p>
           </div>
         )}
       </section>
@@ -74,7 +67,10 @@ function Home() {
           <button onClick={loadMoreRoverPhotos}>Load More Photos</button>
         </div>
       </section>
-      
+      <section className="footer-section">
+        <h2>Made By</h2>
+        <Footer />
+      </section>
     </main>
   );
 }
