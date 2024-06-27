@@ -1,21 +1,39 @@
-.iss-con{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-  
+.iss-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .iss-tracker {
-    width: 100%;
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.iss-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .iss-tracker {
+    max-width: 400px; /* Adjust as needed */
   }
-  
-  .iss-image {
-    width: 100%;
-    height: auto;
+
+  .iss-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
-  
+}
+
+@media screen and (max-width: 480px) {
+  .iss-tracker {
+    max-width: 300px; /* Adjust as needed */
+  }
+}

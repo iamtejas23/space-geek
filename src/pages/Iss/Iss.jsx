@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ISSTracker.css';
+import ISSWidget from './ISSWidget';
+import iss from '../../assets/iss.png';
 
 const IssTracker = () => {
   const [issPosition, setIssPosition] = useState(null);
@@ -30,7 +32,7 @@ const IssTracker = () => {
       {issPosition && (
         <div>
           <img
-            src={`https://static.wheretheiss.at/v4/satellites/${issPosition.id}/map.png`}
+            src={iss}
             alt="ISS Location"
             className="iss-image"
           />
@@ -44,6 +46,7 @@ const IssTracker = () => {
         </div>
       )}
     </div>
+    <ISSWidget />
     </div>
   );
 };

@@ -1,0 +1,33 @@
+.widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 310px;
+    margin: auto;
+  }
+  
+  .widget-iframe {
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    width: 100%;
+    height: 450px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .widget-container {
+      max-width: 90%;
+    }
+  
+    .widget-iframe {
+      height: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .widget-iframe {
+      height: 250px;
+    }
+  }
+  
