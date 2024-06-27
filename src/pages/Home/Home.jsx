@@ -68,7 +68,7 @@ function Home() {
         </div>
       </section>
       <section className="footer-section">
-        <h2>Made By</h2>
+        <h2>Creator</h2>
         <Footer />
       </section>
     </main>
