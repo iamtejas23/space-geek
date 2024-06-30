@@ -40,7 +40,7 @@ const SolarSystem = () => {
         />
       </div>
       {loading ? (
-        <p>Loading...</p>
+        <p>Loading Solar System Bodies...</p>
       ) : (
         <div className="planet-list">
           {filteredBodies.map(body => (

@@ -103,3 +103,23 @@ h2::after {
     grid-template-columns: 1fr;
   }
 }
+
+
+.apod-media {
+  width: 100%;
+  height: 100%;
+  height: auto;
+}
+
+.apod iframe.apod-media {
+  height: 100%;
+  width: 100%;
+}
+
+.loading-banner {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 20px;
+  color: #ffffff;
+  margin: 20px 0;
+}

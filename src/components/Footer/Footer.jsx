@@ -15,6 +15,9 @@ function Footer() {
           <a href="https://www.linkedin.com/in/iamtejas23" className="footer-link" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
+          <a href="/" className="footer-link" >
+            Geek APIs
+          </a>
         </div>
       </div>
     </footer>

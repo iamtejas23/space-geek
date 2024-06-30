@@ -1,69 +1,95 @@
-/* Navbar.css */
 .navbar {
+  background-color: #111;
+  padding: 10px 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #00ffea;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00ffea;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     background-color: #111;
     padding: 10px 0;
+    z-index: 1;
   }
-  
-  .container {
+
+  .nav-links.active {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
   }
-  
-  .logo {
-    font-size: 24px;
-    color: #00ffea;
-    text-decoration: none;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
+
   .nav-link {
-    margin-left: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    margin: 10px;
+    font-size: 16px;
   }
-  
-  .nav-link:hover {
-    color: #00ffea;
+
+  .hamburger {
+    display: flex;
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 0 10px;
-    }
-    
-    .nav-links {
-      display: none;
-    }
-    
-    .logo {
-      margin-left: 10px;
-    }
-    
-    .navbar.active .nav-links {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #111;
-      padding: 10px 0;
-      z-index: 1;
-    }
-    
-    .navbar.active .nav-links .nav-link {
-      margin: 10px;
-      font-size: 16px;
-    }
+
+  .navbar.active .nav-links {
+    display: flex;
   }
-  
+
+  .navbar.active .nav-links .nav-link {
+    margin: 10px;
+    font-size: 16px;
+  }
+}

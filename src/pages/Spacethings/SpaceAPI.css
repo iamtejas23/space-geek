@@ -1,43 +1,7 @@
-.space-api-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .space-api-container h1 {
-    text-align: center;
-    font-size: 24px;
-  }
-  
-  .space-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .space-card {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  .space-logo {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .space-card p {
-    margin: 5px 0;
-  }
-  
-  .space-card ul {
-    margin-top: 5px;
-  }
-  
-  .space-card ul li {
-    list-style-type: square;
-    margin-left: 20px;
-  }
-  
+.Comt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 4rem;
+}
